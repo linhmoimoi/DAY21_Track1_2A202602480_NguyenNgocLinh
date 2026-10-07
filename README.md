@@ -35,17 +35,17 @@
 
 | Trường | Phân tích của tôi |
 | --- | --- |
-| High-risk moment | [Tình huống cụ thể có rủi ro] |
-| Stakeholder bị ảnh hưởng | [Người dùng và các bên liên quan] |
-| Failure mode | [Kiểu lỗi AI] |
-| Layer bắt đầu lỗi | [UX / Grounding / Safety / Model; giải thích hoặc ghi chưa đủ bằng chứng] |
-| Harm xảy ra là gì? | [Ai bị ảnh hưởng + hậu quả; ghi rõ đã xảy ra hay mới là nguy cơ] |
-| Harm lens | [Loại tác hại] |
-| Severity | [Low / Medium / High / Critical] |
-| Scale | [Quy mô tác động và căn cứ] |
-| Probability | [Khả năng xảy ra và căn cứ] |
-| Frequency | [Tần suất và căn cứ] |
-| Vì sao? | [Lý do cho các đánh giá; nguồn hoặc giới hạn bằng chứng] |
+| High-risk moment | Thời điểm công cụ AI tự động soạn thảo bài viết giải thích tài chính (tính lãi kép, APY, phí rút tiền sớm) và xuất bản lên chuyên mục CNET Money, sau đó độc giả tìm kiếm thông tin trên Google tiếp cận bài viết để đưa ra quyết định gửi tiết kiệm hoặc đầu tư tài chính. |
+| Stakeholder bị ảnh hưởng | Độc giả đại chúng tìm kiếm tư vấn tài chính (người dùng trực tiếp); đội ngũ phóng viên/biên tập viên CNET (bị tổn hại uy tín nghề nghiệp); ban biên tập CNET và tập đoàn Red Ventures (chịu khủng hoảng truyền thông và mất niềm tin độc giả). |
+| Failure mode | Hallucination (AI tự sinh công thức toán học sai lệch về cách tính lãi kép, tính sai số dư tiết kiệm) kết hợp Over-reliance (tòa soạn tin tưởng tuyệt đối vào AI, buông lỏng hoặc làm chiếu lệ quy trình kiểm duyệt chuyên môn trước khi xuất bản). |
+| Layer bắt đầu lỗi | Bắt đầu từ Layer Model (mô hình LLM thiếu năng lực suy luận toán học số học chính xác trong bối cảnh tài chính, sinh ảo giác) và bộc lộ ở Layer Safety & UX (thiếu cơ chế validation lọc lỗi số học; UX hiển thị bút danh mập mờ 'CNET Money Staff' khiến độc giả lầm tưởng có chuyên gia con người thẩm định). |
+| Harm xảy ra là gì? | Độc giả bị tiếp nhận kiến thức tài chính sai lệch và đối mặt nguy cơ đưa ra quyết định gửi tiền/đầu tư bất lợi, mất tiền sinh lời thực tế khi làm theo hướng dẫn sai (tác hại thông tin sai đã xảy ra; nguy cơ thiệt hại tài sản); tòa soạn CNET bị tổn hại nghiêm trọng uy tín báo chí 28 năm tuổi (tác hại đã xảy ra). |
+| Harm lens | Misinformation (thông tin sai lệch về tài chính) và nguy cơ Opportunity loss (tổn thất cơ hội tài chính / tiền gửi của độc giả). |
+| Severity | Medium (chưa gây thương tật thể chất hay tử vong, nhưng tác động trực tiếp đến tiền bạc tiết kiệm của người dân và làm suy giảm niềm tin cốt lõi vào tin tức số). |
+| Scale | Medium (được đo lường trên 41 bài viết bị lỗi trên CNET — một trong những trang tin công nghệ hàng đầu thế giới với lượng truy cập hàng triệu lượt mỗi tháng, bài viết được tối ưu SEO đứng đầu kết quả tìm kiếm Google). |
+| Probability | High (tỷ lệ xảy ra lỗi cực cao được đo lường chính xác là 53,2% — 41/77 bài viết do AI tạo ra đều chứa lỗi sai thực tế theo rà soát nội bộ chính thức của CNET). |
+| Frequency | High (xảy ra liên tục hàng ngày/hàng tuần trong suốt 3 tháng thử nghiệm từ tháng 11/2022 đến tháng 01/2023). |
+| Vì sao? | Severity đánh giá Medium vì rủi ro liên quan đến tài sản tiền bạc nhưng không nguy hiểm tính mạng; Scale ở mức Medium vì ảnh hưởng đến độc giả đọc 41 bài viết nhưng chưa đủ số liệu đo lường số người thực sự bị mất tiền; Probability và Frequency đạt mức High do tỷ lệ lỗi đo được là 53,2% (41/77 bài) và diễn ra liên tục trong 3 tháng thử nghiệm. |
 
 ### 3. Case study 2 — Gannett & LedeAI: Thất bại tự động hóa bản tin thể thao học đường (2023)
 
@@ -68,14 +68,14 @@
 
 | Trường | Phân tích của tôi |
 | --- | --- |
-| High-risk moment | [Điền] |
-| Stakeholder bị ảnh hưởng | [Điền] |
-| Failure mode | [Điền] |
-| Layer bắt đầu lỗi | [Điền] |
-| Harm xảy ra là gì? | [Điền; phân biệt hậu quả đã xảy ra với nguy cơ] |
-| Harm lens | [Điền] |
-| Severity | [Điền] |
-| Scale | [Điền] |
-| Probability | [Điền] |
-| Frequency | [Điền] |
-| Vì sao? | [Điền căn cứ và giới hạn bằng chứng] |
+| High-risk moment | Thời điểm hệ thống LedeAI tiếp nhận dữ liệu điểm số, tự động biên soạn thành bài báo tổng thuật thể thao và xuất bản trực tiếp lên trang tin của nhật báo địa phương (*The Columbus Dispatch*) mà không qua bất kỳ khâu duyệt bài nào của biên tập viên người thật. |
+| Stakeholder bị ảnh hưởng | Độc giả địa phương, học sinh và phụ huynh vận động viên (người tiếp nhận thông tin); phóng viên thể thao địa phương (bị giảm việc làm, tổn hại danh dự nghề nghiệp); ban biên tập báo The Columbus Dispatch và tập đoàn Gannett (chịu tổn thất uy tín, bị độc giả quay lưng và chế giễu). |
+| Failure mode | Hallucination / Lỗi sinh văn bản máy móc (AI sinh câu từ sáo rỗng vô nghĩa, lặp từ, miêu tả kỳ dị) kết hợp Escalation failure (khi hệ thống gặp lỗi biến dữ liệu trống và không điền được biến `[[WINNING_TEAM_MASCOT]]`, nó không chuyển về cho người xử lý mà vẫn tự động xuất bản thẳng ra ngoài). |
+| Layer bắt đầu lỗi | Bắt đầu từ Layer Grounding & Safety (hệ thống thiếu lớp guardrail kiểm tra dữ liệu đầu ra để phát hiện chuỗi ký tự placeholder chưa được render) và hoàn toàn thiếu vắng khâu Human-in-the-loop (con người kiểm duyệt trước khi ấn nút xuất bản ở tầng CMS). |
+| Harm xảy ra là gì? | Độc giả và phụ huynh học sinh bị tiếp nhận các bài báo chất lượng kém, vô nghĩa và thiếu thông tin cầu thủ khi theo dõi thể thao học đường (tác hại đã xảy ra); các em học sinh bị tổn hại về sự ghi nhận thành tích thể thao (tác hại đã xảy ra); tập đoàn Gannett bị suy giảm nghiêm trọng uy tín thương hiệu báo chí và bị công chúng chế giễu (tác hại đã xảy ra). |
+| Harm lens | Misinformation (thông tin sai lệch / hỏng cấu trúc kỹ thuật) và Dignity loss (tổn hại sự tôn vinh nỗ lực và phẩm giá thi đấu của các vận động viên học sinh trung học). |
+| Severity | Low (không gây nguy hiểm đến an toàn thể chất hay thiệt hại tài chính trực tiếp, chủ yếu gây trải nghiệm đọc tồi tệ, mất tính nghiêm túc của báo chí và tổn hại danh tiếng tòa soạn). |
+| Scale | High (phạm vi tác động tới toàn bộ hệ thống hơn 200 nhật báo địa phương thuộc tập đoàn Gannett trên nhiều bang của Mỹ, bài viết lỗi lan truyền với hàng triệu lượt xem và tương tác trên mạng xã hội). |
+| Probability | High (xác suất xảy ra lỗi cao trong các loạt trận đấu vì toàn bộ hệ thống áp dụng chung một khuôn mẫu tự động của LedeAI mà không có bộ lọc phát hiện lỗi trước khi xuất bản). |
+| Frequency | High (xuất hiện đồng loạt trên hàng chục bài báo thể thao học đường tại nhiều địa phương trong các dịp cập nhật tỷ số cuối tuần tháng 8/2023). |
+| Vì sao? | Severity đánh giá Low vì không có thiệt hại vật chất hoặc tính mạng; Scale đánh giá High vì độ phủ hơn 200 đầu báo địa phương và hàng triệu lượt tiếp cận trên mạng xã hội; Probability và Frequency đánh giá High vì quy trình tự động hóa 100% không người duyệt nên mọi bài gặp lỗi placeholder/lỗi sinh từ đều chắc chắn xuất hiện công khai trên mặt báo. |
